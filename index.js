@@ -1,5 +1,5 @@
 function openformm(){
-     window.open("openform.html", "width=200,height=100");
+    location.href="http://127.0.0.1:5500/openform.html";
    
 }
 
@@ -7,7 +7,7 @@ function openformm(){
 
 
 function closeform(){
-    location.href="http://127.0.0.1:5500/proodummy/dummy.html"
+    location.href="http://127.0.0.1:5500/index.html";
 }
 function incre(){
     if(document.getElementById("image").src="https://lh3.googleusercontent.com/pw/ACtC-3fktA5DQpYIQy2FMEl85cogjMResA_RKefmQKg56lPCIgFhgb8jyEiHS79xDSTREpoegwY2M1OocrTUioob-q0X_r0KxX8y4RRtXwBB3AEa7JtjIAJrBCTYeeF9VwTnQq6SzBKtIEN4gkFbCvDLVEGV=w1088-h442-no?authuser=0"){
@@ -80,14 +80,14 @@ function validatepwd(){
 function validation(){
     if(nameflag && emailflag && phflag && pwdflag){
         alert("registration succesfull");
-        location.href="http://127.0.0.1:5500/proodummy/streaming.html";
+        location.href="http://127.0.0.1:5500/streaming.html";
     }
     else{
-        alert("try again");
+        alert("Enter valid details");
     }
 }
 function home(){
-    location.href="http://127.0.0.1:5500/proodummy/dummy.html";
+    location.href="http://127.0.0.1:5500/index.html";
 }
 function displaymovies(){
     var city1=document.getElementById("city").value;
@@ -115,7 +115,7 @@ function displaymovies(){
 }
 function logout(){
     alert("Loged out sucessfully");
-    location.href="http://127.0.0.1:5500/proodummy/dummy.html","https://lh3.googleusercontent.com/pw/ACtC-3eV87tdx6lr3c2fpDUuQVRC3XEn1YDuVkPrxxHZoyr6H7iB9ibCuF9PDHHGqAZX-JQHlsl6ME6rLTkKYmloC00paSpZmm1Ad9fL7BK0-C4IavpurpmJ-NXxQGfxU6hR_OVfRf28w0jEYsVt3PWlOCfu=w300-h150-no?authuser=0";
+    location.href="http://127.0.0.1:5500/index.html";
 }
 function booking(){
     var mywindow=window.open("booking.html");
