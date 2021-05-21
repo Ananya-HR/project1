@@ -1,0 +1,14 @@
+*{
+    background-color: white;
+}
+#discription{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-top: 15rem;
+    width: 40rem;
+    height: 20rem;
+}
+#details,p{
+    background-color: white;
+}

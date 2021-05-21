@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./streaming.css">
+    <title>Book Now</title>
+</head>
+<body>
+    <header>
+        <span id="movie">MY <button onclick="home()">MOvie</button>.com</span>
+        <span id="log" value="logout" onclick="logout()">Log out</span>
+        <right>
+       
+        
+        <span><img id="location" src="https://lh3.googleusercontent.com/pw/ACtC-3cRs3cZLY2tWyXdxZRCvrZKC3L5LLvRPmQCXi5SqlcnqAgPwastwGj2ThnqckeZdhAb0bUNgFBBrZypsUep7ta13IORvnsnBi51NQtuE4SYKJWm6iR4caWWm-tAS58CtrapS9B5UjxI3IVp3mErUH5S=w89-h121-no?authuser=0"></span>
+          
+
+        <select id="city" onchange="displaymovies()">
+            <option value="select">Select city</option>
+            <option  value="Bangalore" selected>Bangalore</option>
+            <option value="Amritsar">Amritsar</option>
+            <option value="Chennai">Chennai</option>
+        </select>
+        </right>
+
+    </header>
+    <center>
+    <p id="text">Now Streaming</p>
+    </center>
+    <div id="body">
+    <div id="movie1">
+        <img src="https://lh3.googleusercontent.com/pw/ACtC-3c4vfV8m75Ihyz26ijDt2aAm5fJIJC4fzk7lnuKfWGszV1M0aLU-DlGtovMuY2eUltyU5imDC4KIa7Iz4tGPdvrtHH8DJpiQSH7tvkotmuOZXMuhjJztGcb6ywASghW1KiiXj0fNYwC02mK60vDvBBa=w300-h150-no?authuser=0">
+        <p id="name">BANG BANG</p>
+        <p>Hindi</p>
+        <span>Action</span>
+        <span>Drama</span>
+        <span>Family</span>
+        <br>
+        <input type="submit" value="Book Now"onclick="booking()">
+    </div>
+    <div id="movie1">
+        <img src="https://lh3.googleusercontent.com/pw/ACtC-3eTAnZRS_2wKVgN4aC5QfFQvrAuyBUronYeC3JttIYRJni23sZBvdsDq-Cux1tD22nrAl7KwnNlwDx9poLdhlvFHr6JLIc2MBvbeqECEUM6onhjNzHetfMcEEfMtOuZRxcYG4jjMSrW4Uy_WDpiZnL8=w300-h150-no?authuser=0">
+        <p id="name">Billi Mousie</p>
+        <p>Hindi</p>
+        <span>Action</span>
+        <span>Drama</span>
+        <span>Family</span>
+        <br>
+        <input type="submit" value="Book Now" onclick="booking()">
+    </div>
+    <div id="movie1">
+        <img src="https://lh3.googleusercontent.com/pw/ACtC-3fhHDEk0ggGnAZYTJgGKXBQ1q6eRXZC_pDYbvJTLsCzQdlHNfrxmiaE4IpoDi2Fywci2batT8XnOSBEA0SBHMvlYqW-N1uX23m5ocNGGxnBAddaE2jl9JDcOfE8QKJdbCeZDqUzoNMtxi4DsOwjSqlc=w300-h150-no?authuser=0">
+        <p id="name">The Wedding</p>
+        <p>English</p>
+        <span>Action</span>
+        <span>Drama</span>
+        <span>Family</span>
+        <br>
+        <input type="submit" value="Book Now" onclick="booking()">
+    </div>
+    <div id="movie1">
+        <img id="img4" src="https://lh3.googleusercontent.com/pw/ACtC-3eV87tdx6lr3c2fpDUuQVRC3XEn1YDuVkPrxxHZoyr6H7iB9ibCuF9PDHHGqAZX-JQHlsl6ME6rLTkKYmloC00paSpZmm1Ad9fL7BK0-C4IavpurpmJ-NXxQGfxU6hR_OVfRf28w0jEYsVt3PWlOCfu=w300-h150-no?authuser=0">
+        <p id="name">Raj</p>
+        <p id="lang">Kannada</p>
+        <span>Action</span>
+        <span>Drama</span>
+        <span>Family</span>
+        <br>
+        <input type="submit" value="Book Now" onclick="booking()">
+    </div>
+    </div>
+    <script src="./dummy.js"></script>
+</body>
+</html>

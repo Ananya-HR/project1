@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./booking.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="discription">
+        <img id="img">
+        <div id="details">
+        <p id="name"></p>
+        <p id="des"></p>
+        <img id="rating">
+        </div>
+    </div>
+    <script>
+        
+        var movie1 = new Array("name","description","rating");
+        
+        if(image.src="https://lh3.googleusercontent.com/pw/ACtC-3c4vfV8m75Ihyz26ijDt2aAm5fJIJC4fzk7lnuKfWGszV1M0aLU-DlGtovMuY2eUltyU5imDC4KIa7Iz4tGPdvrtHH8DJpiQSH7tvkotmuOZXMuhjJztGcb6ywASghW1KiiXj0fNYwC02mK60vDvBBa=w300-h150-no?authuser=0"){
+        movie1[0]=document.getElementById("name");
+
+        movie1[1]="This is a family entertainer Movie... Hero:john heroine:Rachel"
+        movie1[2]="https://lh3.googleusercontent.com/pw/ACtC-3cRs3cZLY2tWyXdxZRCvrZKC3L5LLvRPmQCXi5SqlcnqAgPwastwGj2ThnqckeZdhAb0bUNgFBBrZypsUep7ta13IORvnsnBi51NQtuE4SYKJWm6iR4caWWm-tAS58CtrapS9B5UjxI3IVp3mErUH5S=w89-h121-no?authuser=0";
+        document.getElementById("name").innerHTML=movie1[0];
+        document.getElementById("des").innerHTML=movie1[1];
+        document.getElementById("rating").src=movie1[2];
+        }
+    </script>
+</body>
+</html>

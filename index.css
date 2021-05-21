@@ -1,0 +1,19 @@
+#right{
+   margin-left: 85rem;
+}
+#display{
+    display: flex;
+    flex-direction: row;
+
+}
+#image{
+    height:40rem;
+    width:90rem;
+}
+footer{
+    text-align: center;
+}
+#decrement{
+   float:bottom;
+   
+}

@@ -1,0 +1,52 @@
+*{
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    background-color: black;
+}
+option{
+    color:black;
+    background-color: white;
+}
+button{
+    color:wheat;
+}
+#movie{
+    background-color: black;
+    color:white;
+}
+#log{
+    margin-left: 60rem;
+    background-color: black;
+    color:white;
+}
+#location{
+    height:20px;
+    background-color: white;
+   float:right;
+    
+}
+
+#city{
+    float: right;
+    background-color: white;
+}
+#body{
+    display: flex;
+    flex-direction:row;
+    margin-top: 8rem;
+}
+p,span,input{
+    color:black;
+    background-color:white;
+}
+#movie1{
+    background-color:white;
+    border: white;
+}
+#text{
+    margin-top: 3rem;
+    font-size: larger;
+    color:white;
+    background-color: black;
+}

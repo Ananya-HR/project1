@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./openform.css">
+    <title>signupform</title>
+</head>
+<body>
+        <img id="back">
+        <div id="form">
+            <div id="internal">
+                <span id="name">Name</span>
+                <input  type="text" id="name1" onkeyup="validatename();" placeholder="Enter Name" required>
+                <p id="un"></p>
+                <br>
+            <span id="email">Email</span>
+            <input id="email1" type="text" onkeyup="validatemail()" placeholder="Enter email" required>
+            <p id="em"></p>
+            <br>
+            <span id="number">PhoneNumber</span>
+            <input id="number1" type="text" onkeyup="validateph()" placeholder="Enter number" required>
+            <p id="ph"></p>
+            <br>
+            <span id="pwd">Password</span>
+            <input id="password1" type="text" onkeyup="validatepwd()" placeholder="Enter password" required>
+            <p id="pa"></p>
+            <br>
+            </div>
+            <center>
+            <button id="submit" onclick="validation()">Register</button>
+            <button id="close" onclick="closeform()">close</button>
+            <br>
+            </center>
+
+
+        </div>
+    
+    <script src="./dummy.js"></script>
+</body>
+</html>
