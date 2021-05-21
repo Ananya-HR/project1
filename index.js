@@ -118,7 +118,7 @@ function logout(){
     location.href="http://127.0.0.1:5500/index.html";
 }
 function booking(){
-    var mywindow=window.open("booking.html");
-    mywindow.document.getElementById("name");
-    
+   var array=document.getElementById("arrayi").value;
+   window.open("./booking.html?arrayindex=array");
+   
 }
