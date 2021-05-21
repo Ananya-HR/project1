@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./booking.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./booking.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="discription">
-        <img id="img">
-        <div id="details">
+      <img id="img" />
+      <div id="details">
         <p id="name"></p>
         <p id="des"></p>
-        <img id="rating">
-        </div>
+        <img id="rating" />
+      </div>
     </div>
     <script>
-       const params= new URLSearchParams(?arrayindex=array);
-       params.get('arrayindex'); 
-      
-        
-      
-        
+      const params = new URLSearchParams(document.location.search.substring(1));
+      const idx = parseInt(params.get("idx"));
+
+      const movies = [
+        {
+          name: "Bang bang",
+          language: "Hindi",
+          genres: ["action", "family", "drama"],
+          img: "https://lh3.googleusercontent.com/pw/ACtC-3eTAnZRS_2wKVgN4aC5QfFQvrAuyBUronYeC3JttIYRJni23sZBvdsDq-Cux1tD22nrAl7KwnNlwDx9poLdhlvFHr6JLIc2MBvbeqECEUM6onhjNzHetfMcEEfMtOuZRxcYG4jjMSrW4Uy_WDpiZnL8=w300-h150-no?authuser=0",
+        },
+        {
+          name: "Bang bang 2",
+          language: "Hindi",
+          genres: ["action", "family", "drama"],
+          img: "https://lh3.googleusercontent.com/pw/ACtC-3eTAnZRS_2wKVgN4aC5QfFQvrAuyBUronYeC3JttIYRJni23sZBvdsDq-Cux1tD22nrAl7KwnNlwDx9poLdhlvFHr6JLIc2MBvbeqECEUM6onhjNzHetfMcEEfMtOuZRxcYG4jjMSrW4Uy_WDpiZnL8=w300-h150-no?authuser=0",
+        },
+        {
+          name: "Bang bang 3",
+          language: "Hindi",
+          genres: ["action", "family", "drama"],
+          img: "https://lh3.googleusercontent.com/pw/ACtC-3eTAnZRS_2wKVgN4aC5QfFQvrAuyBUronYeC3JttIYRJni23sZBvdsDq-Cux1tD22nrAl7KwnNlwDx9poLdhlvFHr6JLIc2MBvbeqECEUM6onhjNzHetfMcEEfMtOuZRxcYG4jjMSrW4Uy_WDpiZnL8=w300-h150-no?authuser=0",
+        },
+      ];
+      const selectedMovie = movies[idx];
+      console.log(selectedMovie);
+      document.getElementById("img").src = selectedMovie.img;
+      document.getElementById("name").innerText = selectedMovie.name;
     </script>
-</body>
+  </body>
 </html>
