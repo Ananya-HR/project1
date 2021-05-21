@@ -8,14 +8,46 @@
     <title>Document</title>
   </head>
   <body>
+      <div id="main">
     <div id="discription">
       <img id="img" />
       <div id="details">
-        <p id="name"></p>
-        <p id="des"></p>
+        <span><b>Name:</b></span>
+        <span id="name"></span>
+        <br>
+        <span><b>Genre:</b></span>
+        <span id="genre"></span>
+        <br>
+        <span><b>Producer:</b></span>
+        <span id="producer"></span>
+        <br>
+        <span><b>Hero:</b></span>
+        <span id="hero"></span>
+        <br>
+        <span><b>Heroine:</b></span>
+        <span id="heroine"></span>
+        <br>
         <img id="rating" />
       </div>
     </div>
+    <div id="form">
+        <div id="center">
+        <input id="number1"type="text" placeholder="Enter PhoneNumber" onkeyup="validateph()" required>
+        <p id="ph"></p>
+        <br>
+        <input id="seats"type="number" required>
+        <br>
+        <input id="date"type="date" required>
+        <br>
+        <input id="time" type="time" required>
+        <br>
+      
+        <button onclick="amount()">Book NOW</button>
+        <p id="payable"></p>
+    </div>
+   
+    </div>
+</div>
     <script>
       const params = new URLSearchParams(document.location.search.substring(1));
       const idx = parseInt(params.get("idx"));
@@ -25,25 +57,68 @@
           name: "Bang bang",
           language: "Hindi",
           genres: ["action", "family", "drama"],
+          hero: "john",
+          heroine:"Rachel",
+          producer:"william",
+          rating:"./3-5-stars.png",
+          img: "https://lh3.googleusercontent.com/pw/ACtC-3c4vfV8m75Ihyz26ijDt2aAm5fJIJC4fzk7lnuKfWGszV1M0aLU-DlGtovMuY2eUltyU5imDC4KIa7Iz4tGPdvrtHH8DJpiQSH7tvkotmuOZXMuhjJztGcb6ywASghW1KiiXj0fNYwC02mK60vDvBBa=w300-h150-no?authuser=0",
+        },
+        {
+          name: "Billi Mousie",
+          language: "Hindi",
+          genres: ["action", "family", "drama"],
+          hero: "john",
+          heroine:"Rachel",
+          producer:"william",
+          rating:"./3-5-stars.png",
           img: "https://lh3.googleusercontent.com/pw/ACtC-3eTAnZRS_2wKVgN4aC5QfFQvrAuyBUronYeC3JttIYRJni23sZBvdsDq-Cux1tD22nrAl7KwnNlwDx9poLdhlvFHr6JLIc2MBvbeqECEUM6onhjNzHetfMcEEfMtOuZRxcYG4jjMSrW4Uy_WDpiZnL8=w300-h150-no?authuser=0",
         },
         {
-          name: "Bang bang 2",
-          language: "Hindi",
+          name: "The Wedding",
+          language: "English",
           genres: ["action", "family", "drama"],
-          img: "https://lh3.googleusercontent.com/pw/ACtC-3eTAnZRS_2wKVgN4aC5QfFQvrAuyBUronYeC3JttIYRJni23sZBvdsDq-Cux1tD22nrAl7KwnNlwDx9poLdhlvFHr6JLIc2MBvbeqECEUM6onhjNzHetfMcEEfMtOuZRxcYG4jjMSrW4Uy_WDpiZnL8=w300-h150-no?authuser=0",
+          hero: "john",
+          heroine:"Rachel",
+          producer:"william",
+          rating:"./3-5-stars.png",
+          img: "https://lh3.googleusercontent.com/pw/ACtC-3fhHDEk0ggGnAZYTJgGKXBQ1q6eRXZC_pDYbvJTLsCzQdlHNfrxmiaE4IpoDi2Fywci2batT8XnOSBEA0SBHMvlYqW-N1uX23m5ocNGGxnBAddaE2jl9JDcOfE8QKJdbCeZDqUzoNMtxi4DsOwjSqlc=w300-h150-no?authuser=0",
         },
         {
-          name: "Bang bang 3",
-          language: "Hindi",
+          name: "Raj",
+          language: "Kannada",
           genres: ["action", "family", "drama"],
-          img: "https://lh3.googleusercontent.com/pw/ACtC-3eTAnZRS_2wKVgN4aC5QfFQvrAuyBUronYeC3JttIYRJni23sZBvdsDq-Cux1tD22nrAl7KwnNlwDx9poLdhlvFHr6JLIc2MBvbeqECEUM6onhjNzHetfMcEEfMtOuZRxcYG4jjMSrW4Uy_WDpiZnL8=w300-h150-no?authuser=0",
+          hero: "john",
+          heroine:"Rachel",
+          producer:"william",
+          rating:"./3-5-stars.png",
+          img: "https://lh3.googleusercontent.com/pw/ACtC-3eV87tdx6lr3c2fpDUuQVRC3XEn1YDuVkPrxxHZoyr6H7iB9ibCuF9PDHHGqAZX-JQHlsl6ME6rLTkKYmloC00paSpZmm1Ad9fL7BK0-C4IavpurpmJ-NXxQGfxU6hR_OVfRf28w0jEYsVt3PWlOCfu=w300-h150-no?authuser=0",
         },
       ];
       const selectedMovie = movies[idx];
       console.log(selectedMovie);
       document.getElementById("img").src = selectedMovie.img;
-      document.getElementById("name").innerText = selectedMovie.name;
+     document.getElementById("name").innerText = selectedMovie.name;
+      document.getElementById("genre").innerText=selectedMovie.genres;
+      document.getElementById("producer").innerText=selectedMovie.producer;
+      document.getElementById("hero").innerText=selectedMovie.hero;
+      document.getElementById("heroine").innerText=selectedMovie.heroine;
+      document.getElementById("rating").src=selectedMovie.rating;
+
+
+     function amount(){
+         if(number1&& seats &&date &&time){
+         let cost_per_ticket=150;
+        let total_cost=0;
+         let seats=document.getElementById("seats").value;
+        total_cost=cost_per_ticket*seats;
+        alert(total_cost);
+        document.getElementById("payable").innerText="Amount payable is "+total_cost;
+         }
+         else{
+            document.getElementById("payable").innerText="Enter all the details";
+         }
+     }
     </script>
+    <script src="./index.js"></script>
   </body>
 </html>

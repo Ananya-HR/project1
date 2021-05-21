@@ -1,7 +1,7 @@
 *{
     margin-top: 1rem;
     margin-right: 1rem;
-    margin-left: 1rem;
+    margin-left: 0.7rem;
     background-color: black;
 }
 option{
@@ -11,7 +11,7 @@ option{
 button{
     color:wheat;
 }
-#movie{
+#movie1{
     background-color: black;
     color:white;
 }
@@ -40,7 +40,7 @@ p,span,input{
     color:black;
     background-color:white;
 }
-#movie1{
+.movie{
     background-color:white;
     border: white;
 }
