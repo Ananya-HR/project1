@@ -39,10 +39,10 @@ span,b{
     margin-bottom: auto;
     background-color: wheat;
     width: 55rem;
-    height: 25rem;
+    height: 27rem;
 }
 #center{
-   margin-top: 4rem;
+   margin-top: 2rem;
     margin-right: 10rem;
     margin-left: 10rem;
     background-color: wheat;
@@ -59,4 +59,12 @@ input,button{
     color:green;
     text-align: center;
     background-color: white;
+}
+#ph{
+    color:red;
+    background-color: wheat;
+}
+#payable{
+    color:green;
+    background-color: wheat;
 }
