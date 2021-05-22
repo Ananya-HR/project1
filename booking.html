@@ -31,6 +31,7 @@
       </div>
     </div>
     <div id="form">
+      <p id="heading">Enter Booking Details</p>
         <div id="center">
         <input id="number1"type="text" placeholder="Enter PhoneNumber" onkeyup="validateph()" required>
         <p id="ph"></p>
@@ -49,6 +50,7 @@
     </div>
 </div>
     <script>
+     
       const params = new URLSearchParams(document.location.search.substring(1));
       const idx = parseInt(params.get("idx"));
 
@@ -103,22 +105,35 @@
       document.getElementById("hero").innerText=selectedMovie.hero;
       document.getElementById("heroine").innerText=selectedMovie.heroine;
       document.getElementById("rating").src=selectedMovie.rating;
-
-
-     function amount(){
-         if(number1&& seats &&date &&time){
+       
+      
+    
+      
+       function amount(){
+        var numflag=document.getElementById("number1").value;
+      var seatflag=document.getElementById("seats").value;
+        var dateflag=document.getElementById("date").value;
+        var timeflag=document.getElementById("time").value;
+       
+     
+       
          let cost_per_ticket=150;
         let total_cost=0;
          let seats=document.getElementById("seats").value;
-        total_cost=cost_per_ticket*seats;
+          let date=document.getElementById("date").value;
+        let time=document.getElementById("time").value;
+          total_cost=cost_per_ticket*seats;
         alert(total_cost);
         document.getElementById("payable").innerText="Amount payable is "+total_cost;
+        document.getElementById("payable").style.display="none";
+        if(numflag&&seatflag&&dateflag&& timeflag){
+          document.getElementById("payable").style.display="block";
+       }
+       
+
          }
-         else{
-            document.getElementById("payable").innerText="Enter all the details";
-         }
-     }
-    </script>
+        
+                </script>
     <script src="./index.js"></script>
   </body>
 </html>

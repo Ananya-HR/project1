@@ -11,15 +11,20 @@
     <!-- ATTENTION: you are using id for almost every element
             IDs are supposed to be on only one unique element
             if you want to target many elements, use class -->
-    <header>
+    <header id="nameload" >
+     
+      <span id="display_name1" value="name" onclick=" display_name()" >click(verify user_name)</span>
+      <br>
       <span id="movie1">MY <button onclick="home()">MOvie</button>.com</span>
-      <span id="log" value="logout" onclick="logout()">Log out</span>
+      <span id="log" value="logout" onclick="logout(event)">Log out</span>
+     
       <right>
         <span
           ><img
             id="location"
             src="https://lh3.googleusercontent.com/pw/ACtC-3cRs3cZLY2tWyXdxZRCvrZKC3L5LLvRPmQCXi5SqlcnqAgPwastwGj2ThnqckeZdhAb0bUNgFBBrZypsUep7ta13IORvnsnBi51NQtuE4SYKJWm6iR4caWWm-tAS58CtrapS9B5UjxI3IVp3mErUH5S=w89-h121-no?authuser=0"
-        /></span>
+        />
+      </span>
 
         <select id="city" onchange="displaymovies()">
           <option value="select">Select city</option>

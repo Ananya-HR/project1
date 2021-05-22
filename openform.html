@@ -8,8 +8,9 @@
     <title>signupform</title>
 </head>
 <body>
-        <img id="back">
+    <span id="movie1">MY <button onclick="home()">MOvie</button>.com</span>
         <div id="form">
+            <p style="text-align: center;color: red;">Registration Form</p>
             <div id="internal">
                 <span id="name">Name</span>
                 <input  type="text" id="name1" onkeyup="validatename();" placeholder="Enter Name" required>
@@ -28,7 +29,7 @@
             <p id="pa"></p>
             <br>
             </div>
-            <center>
+            <center id="white">
             <button id="submit" onclick="validation()">Register</button>
             <button id="close" onclick="closeform()">close</button>
             <br>

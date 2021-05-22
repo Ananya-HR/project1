@@ -43,7 +43,7 @@ function validatename() {
   } else {
     nameflag = true;
     document.getElementById("un").innerHTML = " ";
-    document.getElementById("un").style.display = "none";
+    
   }
 }
 function validatemail() {
@@ -54,7 +54,7 @@ function validatemail() {
   } else {
     emailflag = true;
     document.getElementById("em").innerHTML = " ";
-    document.getElementById("em").style.display = "none";
+    
   }
 }
 function validateph() {
@@ -65,7 +65,7 @@ function validateph() {
   } else {
     phflag = true;
     document.getElementById("ph").innerHTML = " ";
-    document.getElementById("ph").style.display = "none";
+    
   }
 }
 
@@ -77,11 +77,15 @@ function validatepwd() {
   } else {
     pwdflag = true;
     document.getElementById("pa").innerHTML = " ";
-    document.getElementById("pa").style.display = "none";
+    
   }
 }
 function validation() {
   if (nameflag && emailflag && phflag && pwdflag) {
+    debugger;
+    localStorage.setItem('user_name',document.getElementById("name1").value);
+    localStorage.setItem('user_password',document.getElementById("password1").value);
+
     alert("registration succesfull");
     location.href = "http://127.0.0.1:5500/streaming.html";
   } else {
@@ -113,7 +117,18 @@ function displaymovies() {
     alert("oops!! something went wrong :(");
   }
 }
-function logout() {
+
+function display_name(){
+  
+  var user=localStorage.user_name;
+  var upper = user.charAt(0).toUpperCase();
+  var newUser = upper+user.substr(1,user.length);
+    document.getElementById("display_name1").innerText ="Welcome "+newUser;
+}
+function logout(event) {
+  event.preventDefault();
+  localStorage.removeItem('user_name');
+  localStorage.removeItem('user_password');
   alert("Loged out sucessfully");
   location.href = "./index.html";
 }

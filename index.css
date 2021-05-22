@@ -1,3 +1,6 @@
+*{
+    background-color: black;
+}
 #right{
    margin-left: 85rem;
 }
@@ -15,5 +18,14 @@ footer{
 }
 #decrement{
    float:bottom;
-   
+   color: black;
+   background-color: wheat;
+}
+#increment{
+    color: black;
+   background-color: wheat;
+}
+p,button{
+    color:white;
+
 }
