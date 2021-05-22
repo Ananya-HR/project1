@@ -38,7 +38,7 @@ function validatename() {
   var user = document.getElementById("name1").value;
   if (user.length < 5 || user.length > 10) {
     document.getElementById("un").innerHTML =
-      "Maximum 5 char and minimum 10 char";
+      "Minimum 5 char and maximum 10 char";
     document.getElementById("un").style.display = "block";
   } else {
     nameflag = true;
