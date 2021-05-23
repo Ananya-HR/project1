@@ -1,5 +1,5 @@
 function openformm() {
-  location.href = "http://127.0.0.1:5500/openform.html";
+  location.href = "./openform.html";
   // TODO: convert to relative path
 }
 
@@ -8,7 +8,7 @@ function openformm() {
 // instead use this "./openform.html"
 
 function closeform() {
-  location.href = "http://127.0.0.1:5500/index.html";
+  location.href = "./index.html";
   // TODO: convert to relative path
 }
 function incre() {
@@ -87,7 +87,7 @@ function validation() {
     localStorage.setItem('user_password',document.getElementById("password1").value);
 
     alert("registration succesfull");
-    location.href = "http://127.0.0.1:5500/streaming.html";
+    location.href = "./streaming.html";
   } else {
     alert("Enter valid details");
   }
